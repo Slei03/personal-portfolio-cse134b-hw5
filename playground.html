@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Sally's Personal Site">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sally Lei - Playground</title>
+        <link rel="icon" type="image/x-icon" href="images/sally.ico">
+
+        <style>
+            th, td{
+                border: 1px solid;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html"><img src="images/name-logo.png" alt="Sally Logo" width="100"></a>
+
+            <nav>
+                <a href="index.html">about</a>
+                <a href="portfolio.html">portfolio</a>
+                <a href="playground.html">playground</a>
+                <a href="contact.html">contact</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Playground</h1>
+            <p><em>a place for every experiment/tag that couldn't go anywhere else</em></p>
+            <p><i>(also a place for a little more about me)</i></p>
+            <pre>
+                ***    ***   *********
+                ***    ***   *********
+                **********      ***
+                **********      ***
+                ***    ***   *********
+                ***    ***   *********
+            </pre>
+            <p> This is a page for me to experiment for hw assignments, play with HTML tags 
+                that don't have a place in the other pages (e.g. <code>video</code> and <code>audio</code> tags), 
+                and share a bit more about myself. 
+                As stated in the <a href="index.html">about</a> page, 
+                I'm currently a 4th-year at UCSD majoring in Computer Science. 
+                Below are the classes I'm taking this quarter:
+            </p>
+            <table>
+                <caption>Classes for WI23 quarter</caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="2">
+                </colgroup>
+                <tr>
+                    <th>Course</th>
+                    <th>Time</th>
+                    <th>Day</th>
+                </tr>
+                <tr>
+                    <td>MATH157</td>
+                    <td>1:00 - 1:50 pm</td>
+                    <td>M,W,F</td>
+                </tr>
+                <tr>
+                    <td>LTCS180</td>
+                    <td>2:00 - 2:50 pm</td>
+                    <td>M,W,F</td>
+                </tr>
+                <tr>
+                    <td>CSE134B</td>
+                    <td>5:00 - 5:50 pm</td>
+                    <td>M,W,F</td>
+                </tr>
+                <tr>
+                    <td>CHIN169A</td>
+                    <td>5:00 - 6:20 pm</td>
+                    <td>T,Th</td>
+                </tr>
+            </table>
+
+            <p> <span>So far,</span> I've been enjoying my classes, but since my classes are later in the day and it is winter quarter,
+                it gets a bit chilly when I leave campus. <br>
+                On the topic of winter though, I do like the winter season, especially rainy days. 
+                Rainy days are nice and therapeutic when I'm indoors. <br>
+                Here's a video clip of rain:
+            </p>
+            <video height="200" width="355" controls loop>
+                <source src="media/rain.mp4" type="video/mp4">
+                <p>Video of rain with tree</p>
+                Browser does not support mp4 rain video
+            </video>
+            <p>And here's an audio clip to go with it: </p>
+            <audio controls loop>
+                <source src="media/rain.mp3" type="audio/mp3">
+                Browser does not support mp3 rain audio
+            </audio>
+            <details>
+                <summary>Fun Facts about Rain</summary>
+                <figure>
+                    <img src="images/corgi-rain.jpg" alt="happy corgi in the rain" width="355">
+                    <figcaption>A happy corgi in the rain</figcaption>
+                </figure>
+                <p>Here are some fun facts about rain:</p>
+                <iframe src="https://www.metoffice.gov.uk/weather/learn-about/weather/types-of-weather/rain/facts-about-rain" title="7 Rain Facts" height="355" width="500"></iframe>
+            </details>
+            <p>While I do like winter very much, it <i>isn't</i> my favorite season. The ranking of my favorite seasons is as follows: </p>
+            <ol>
+                <li>spring</li>
+                <li>winter</li>
+                <li>fall</li>
+                <li>summer</li>
+            </ol>
+            
+            <form>
+                <fieldset>
+                    <legend>Weather Survey</legend>
+                    <label for="season">What's your favorite season?</label>
+                    <select name="season" id="season">
+                        <option value="winter">Winter</option>
+                        <option value="spring">Spring</option>
+                        <option value="summer">Summer</option>
+                        <option value="fall">Fall</option>
+                    </select>
+                    <br>
+                    <label for="weather-choice">How about your favorite weather condition?</label>
+                    <input list="weather-condition" name="weather-choice" id="weather-choice">
+                    <datalist id="weather-condition">
+                      <option value="sunny">
+                      <option value="cloudy">
+                      <option value="rainy">
+                      <option value="snowy">
+                    </datalist>
+                    <br>
+                    <label for="climate">How about your favorite climate? (More info on climate options <a href="https://education.nationalgeographic.org/resource/all-about-climate" target="_blank">here</a>)</label>
+                    <select  name="climate" id="climate">
+                        <optgroup label="Tropical">
+                            <option value="wet">wet</option>
+                            <option value="monsoon">monsoon</option>
+                            <option value="wet-dry">wet and dry</option>
+                        </optgroup>
+                        <optgroup label="Dry">
+                            <option value="arid">arid</option>
+                            <option value="semiarid">semiarid</option>
+                        </optgroup>
+                        <optgroup label="Mild">
+                            <option value="med">mediterranean</option>
+                            <option value="hum-sub">humid subtropical</option>
+                            <option value="marine">marine</option>
+                        </optgroup>
+                        <optgroup label="Continental">
+                            <option value="continental">continental</option>
+                            <option value="cool-summer">cool summer</option>
+                            <option value="subarctic">subarctic</option>
+                        </optgroup>
+                        <optgroup label="polar">
+                            <option value="tundra">tundra</option>
+                            <option value="ice-cap">ice cap</option>
+                        </optgroup>
+                    </select>
+                    <br>
+                    <input type="submit">
+                </fieldset>
+            </form>
+            <template><i>Thanks for the submission!</i></template>
+
+            <p>Not only do I like the ambience of rainy days, I also like the shape of raindrops.
+                It's similar to a circle (though not quite) which is my favorite shape!
+                Here a drawing of a circle in my favorite color blue!
+            </p>
+            <svg width="100" height="100">
+                <title>A blue circle</title>
+                <circle cx="50" cy="50" r="25" stroke="black" stroke-width="2" fill="blue"/>
+            </svg>  
+            <aside>
+                <p>Squares are cool too!</p>
+                <canvas id="blue-circle-canvas" width="100" height="100">
+                    Broswer does not support canvas tag. Unable to render blue square.
+                </canvas>  
+            </aside>    
+        </main>
+        <hr>
+        <footer>
+            <p>video, audio, and photo in this Playground page are taken from <a href="https://pixabay.com/">Pixabay</a></p>
+            <p>you've reached the foot of this page &#129462;</p>
+        </footer>
+
+        <script>
+            const blueCircleCanvas = document.getElementById("blue-circle-canvas");
+            const blueCircleCtx = blueCircleCanvas.getContext('2d');
+            blueCircleCtx.fillStyle='blue';
+            blueCircleCtx.fillRect(25, 25, 50, 50);
+        </script>
+    </body>
+</html>

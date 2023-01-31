@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Sally's Personal Site">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sally Lei - Contact</title>
+        <link rel="icon" type="image/x-icon" href="images/sally.ico">
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html"><img src="images/name-logo.png" alt="Sally Logo" width="100"></a>
+
+            <nav>
+                <a href="index.html">about</a>
+                <a href="portfolio.html">portfolio</a>
+                <a href="playground.html">playground</a>
+                <a href="contact.html">contact</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Contact</h1>
+            <div id="social-links">
+                <p>Connect via: </p>
+                <a href="https://www.linkedin.com/in/lei-sallyc/">
+                    <img src="images/linkedin-icon.png" alt="Clickable linkedin Icon" width="25">
+                </a>
+            </div>
+            <p>or</p>
+            <p>Leave me a message: </p>
+            <form id="contact-form">
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+                <br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="10" cols="50" placeholder="Leave me a message!"></textarea>
+                <br>
+                <button type="submit">Send</button>
+            </form>
+        </main>
+    </body>
+</html>

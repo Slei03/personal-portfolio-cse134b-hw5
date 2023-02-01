@@ -1,4 +1,6 @@
 # personal-portfolio-cse134b
 
-Name: Sally Lei
+Deployed Site: https://sallylei.netlify.app/
+
+Name: Sally Lei  
 PID: A16038154

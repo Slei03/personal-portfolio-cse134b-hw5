@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root{
+    --orange-base-color: #faba61;
+
+    --light-theme-font-color: #121212cf;
+
+    --dark-theme-bg-color: #121212;
+    --dark-theme-font-color: #ffffffde;
+    --dark-theme-form-color: #323232; 
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+
+a, body{
+    color: var(--light-theme-font-color);
+}
+
+/******************Nav Bar******************/
+header{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1% 0%;
+}
+
+header nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header nav>a{
+    font-size: 1.1rem;
+    padding: 1em;
+    text-underline-offset: 0.3em;
+    text-decoration: underline 0.15em transparent;
+    transition: text-decoration-color 200ms;
+}
+
+header nav>a:hover{
+    text-decoration-color: var(--orange-base-color);
+}
+
+header img{
+    padding: 0.25em 1em;
+}
+
+/******************About Page******************/
+#about{
+    margin-top: 1%;
+    margin-right: 1%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#about-text{
+    margin-top: auto;
+    margin-bottom: 6%;
+}
+
+#about-text a:hover{
+    color: var(--orange-base-color);
+}
+
+#me{
+    animation: 2s linear infinite alternate up-down;
+}
+
+@keyframes up-down{
+    from   { transform : translateX(0em); }
+    to  { transform : translateY(0.75em); }
+}
+
+@media screen and (max-width:325px){
+    #about{
+        flex-wrap: wrap;
+    }
+}
+
+/******************Portfolio Page******************/
+#portfolio{
+    margin: 0% 15%;
+}
+
+#portfolio section{
+    margin: 5% 0%;
+}
+
+#portfolio ul{
+    padding-left: 0%;
+}
+
+#portfolio li{
+    list-style: none;
+    border-radius: 10px;
+    box-shadow: -4px 3px 5px 5px #5656566a;
+    padding: 2.5%;
+    transition: box-shadow 0.35s ease-out;
+    opacity: 0.93;
+}
+
+#portfolio li:hover{
+    box-shadow: 0px 0px 5px 5px #5656566a;
+    opacity: 1;
+}
+
+#projects li{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+
+#projects a:hover{
+    opacity: 0.5;
+}
+
+#projects li>img{
+    width: 30%;
+    height: auto;
+}
+
+#projects li>div{
+    margin-left: 2%;
+    max-width: 68%;
+    align-self: center;
+}
+
+@media screen and (max-width:900px) {
+    #projects li>img{
+        width: 60%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #projects li>img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+/******************Contact Page******************/
+#contact{
+    margin: 0% 15%;
+}
+
+#social-links{
+    margin-top: 6%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#social-links p{
+    margin: 0.25rem 0.5rem 0.25rem 0rem;
+}
+
+#social-links a{
+    display: flex;
+    align-items: center;
+}
+
+#social-links a>img{
+    width: 65%;
+}
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact-form label{
+    margin-bottom: 0.25em;
+}
+
+#contact-form input, textarea, button{
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#contact-form textarea{
+    max-width: 100%;
+}
+
+#contact-form button{
+    align-self: center;
+    width: 30%;
+    padding: 16px;
+    background-color: transparent;
+    font-weight: bold;
+    opacity: 0.9;
+    transition: border-radius 0.5s ease-in-out, width 0.5s ease-in-out; 
+}
+
+#contact-form button:hover{
+    opacity: 1;
+    border-radius: 15px;
+    width: 20%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+    #contact-form button{
+        width: 60%;
+    }
+
+    #contact-form button:hover{
+        width: 45%;
+    }
+}
+
+/******************Dark Theme******************/
+@media (prefers-color-scheme: dark) { 
+    *, a{
+        color: var(--dark-theme-font-color);
+    }
+
+    body{
+        background-color: var(--dark-theme-bg-color);
+    } 
+
+    #contact-form input,textarea,button{
+        background-color: var(--dark-theme-form-color);
+        border-color: var(--dark-theme-font-color);
+    }
+    
+    #logo{
+        /* Used https://codepen.io/sosuke/pen/Pjoqqp to determine filter values */
+        filter: invert(99%) sepia(78%) saturate(5%) hue-rotate(79deg) brightness(117%) contrast(89%);
+    }
+}

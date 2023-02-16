@@ -5,33 +5,35 @@
         <meta name="description" content="Sally's Personal Site">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sally Lei</title>
-        <link rel="icon" type="image/x-icon" href="images/sally.ico">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
         <header>
-            <a href="index.html"><img src="images/name-logo.png" alt="Sally Logo" width="100"></a>
+            <a href="index.html"><img src="images/logo.svg" alt="Sally Logo" width="130" id="logo"></a>
 
             <nav>
                 <a href="index.html">about</a>
                 <a href="portfolio.html">portfolio</a>
-                <a href="playground.html">playground</a>
                 <a href="contact.html">contact</a>
             </nav>
         </header>
-        <main>
+        <main id="about">
             <div id="me">
                 <picture>
-                    <source srcset="images/me.png" media="(min-width: 700px)" width="700">
-                    <source srcset="images/me-half.png" media="(min-width: 350px)" width="350">
-                    <img src="images/me-arm.png" alt="a doodle of Sally" width="200">
+                    <source srcset="images/me-full.webp" media="(min-width: 1100px)" width="700">
+                    <source srcset="images/me-half.webp" media="(min-width: 550px)" width="350">
+                    <img src="images/me-arm.webp" alt="a doodle of Sally" width="200">
                 </picture>
             </div>
-            <h1>About</h1>
-            <p>Hi there! I'm Sally Lei. I'm currently a 4th-year majoring in 
-                Computer Science and minoring in Mathematics at the University of California, San Diego.
-            <p><b>Hobbies: </b>I enjoy listening to music, (occasional) reading, and going on trips with family.</p>
-            <p><strong><em>Do</em> explore the site!</strong></p>
+            <div id="about-text">
+                <h1>About</h1>
+                <p>Hi there! I'm Sally Lei. I'm currently a 4th-year majoring in 
+                    Computer Science and minoring in Mathematics at the University of California, San Diego.
+                <p><b>Hobbies: </b>I enjoy listening to music, (occasional) reading, and going on trips with family.</p>
+                <p><strong><em>Check out my <a href="portfolio.html">portfolio</a> or <a href="contact.html">connect</a>!</em></strong></p>
+            </div>
         </main>
     </body>
 </html>

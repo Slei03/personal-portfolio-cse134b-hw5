@@ -107,7 +107,7 @@ header img{
 #portfolio li{
     list-style: none;
     border-radius: 10px;
-    box-shadow: -4px 3px 5px 5px #5656566a;
+    box-shadow: -4px 3px 5px 5px var(--box-shadow-color);
     padding: 2.5%;
     transition: box-shadow 0.35s ease-out;
     opacity: 0.93;

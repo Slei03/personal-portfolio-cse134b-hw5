@@ -4,15 +4,27 @@
     --orange-base-color: #faba61;
     --box-shadow-color: #5656566a;
 
-    --light-theme-font-color: #121212cf;
-
-    --dark-theme-bg-color: #121212;
-    --dark-theme-font-color: #ffffffde;
-    --dark-theme-form-color: #323232; 
+    --theme-font-color: #121212cf;
+    --theme-bg-color: #ffffffde;
+    --theme-form-color: #ffffffde;
+    --theme-icon-color: #626161;
+    --theme-icon-hover-color: #ffa62b;
 }
 
-*{
+/******************Dark Theme Colors******************/
+/* Referred to: https://stackoverflow.com/questions/56300132/how-to-override-css-prefers-color-scheme-setting */
+[color-scheme="dark"]{
+    --theme-font-color: #ffffffde;
+    --theme-form-color: #323232;
+    --theme-bg-color: #121212;
+    --theme-icon-color: #cecece;
+    --theme-icon-hover-color: #f8c070;
+}
+
+/******************General Styling******************/
+*, a{
     font-family: 'Roboto', Arial, sans-serif;
+    color: var(--theme-font-color);
 }
 
 h1{
@@ -24,8 +36,8 @@ p{
 }
 
 
-a, body{
-    color: var(--light-theme-font-color);
+body{
+    background-color: var(--theme-bg-color);
 }
 
 /******************Nav Bar******************/
@@ -35,6 +47,7 @@ header{
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1% 0%;
+    margin-right: 1%;
 }
 
 header nav{
@@ -59,6 +72,21 @@ header img{
     padding: 0.25em 1em;
 }
 
+#color-mode{
+    background-color: transparent;
+    padding: 0 1em;
+    border: none;
+    cursor: pointer;
+}
+
+#color-mode>svg>path{
+    fill: var(--theme-icon-color);
+}
+
+#color-mode:hover>svg>path{
+    opacity: 1;
+    fill: var(--theme-icon-hover-color);
+}
 /******************About Page******************/
 #about{
     margin-top: 1%;
@@ -216,6 +244,11 @@ header img{
     cursor: pointer;
 }
 
+#contact-form input,textarea,button{
+    background-color: var(--theme-form-color);
+    border-color: var(--theme-font-color);
+}
+
 @media screen and (max-width:600px) {
     #contact-form button{
         width: 60%;
@@ -225,24 +258,33 @@ header img{
         width: 45%;
     }
 }
+/******************Contact Form Submission Dialog******************/
+#contact-form-dialog{
+    background-color: var(--theme-bg-color);
+    border: none;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: -1px 3px 5px 1px var(--box-shadow-color);
+    text-align: center;
+    width: 40%;
+    max-height: 30rem;
+}
 
-/******************Dark Theme******************/
-@media (prefers-color-scheme: dark) { 
-    *, a{
-        color: var(--dark-theme-font-color);
-    }
+#contact-form-dialog::backdrop {
+    background: rgba(0,0,0,0.5);
+}
 
-    body{
-        background-color: var(--dark-theme-bg-color);
-    } 
+#contact-form-dialog img{
+    max-width: 50%;
+}
 
-    #contact-form input,textarea,button{
-        background-color: var(--dark-theme-form-color);
-        border-color: var(--dark-theme-font-color);
-    }
-    
-    #logo{
-        /* Used https://codepen.io/sosuke/pen/Pjoqqp to determine filter values */
-        filter: invert(99%) sepia(78%) saturate(5%) hue-rotate(79deg) brightness(117%) contrast(89%);
+#contact-form-dialog button{
+    width: 50%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+    #contact-form-dialog{
+        width: 80%;
     }
 }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Sally's Personal Site">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sally Lei - Simple Dialogs</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js" integrity="sha512-TU4FJi5o+epsahLtM9OFRvH2gXmmlzGlysk9wtTFgbYbMvFzh3Cw1l3ubnYIvBiZCC/aurRHS408TeEbcuOoyQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+    </head>
+    <body>
+        <button id="alert-btn">Alert</button>
+        <button id="confirm-btn">Confirm</button>
+        <button id="prompt-btn">Prompt</button>
+        <br/>
+        <output id="result" style="font-size: 1.25rem;">
+            <!--Output Content-->
+        </output>
+
+        <template id="alert-dialog">
+            <form method="dialog">
+                <p>Alert pressed</p>
+                <button>Ok</button>
+            </form>
+        </template>
+
+        <template id="confirm-dialog">
+            <form method="dialog">
+                <p>Do you confirm this?</p>
+                <button id="cancel-confirm">Cancel</button>
+                <button id="ok-confirm">Ok</button>
+            </form>
+        </template>
+
+        <template id="prompt-dialog">
+            <form method="dialog">
+                <p>What's your name?</p>
+                <input type="text" id="username" name="username" value=""></input>
+                <button id="cancel-prompt">Cancel</button>
+                <button id="ok-prompt">Ok</button>
+            </form>
+        </template>
+
+        <dialog id="the-dialog">
+        </dialog>
+
+        <script type="module">
+            import {showDialog, cleanString} from "./customdialog.js"
+
+            const resultBox = document.getElementById("result");
+            const theDialog = document.getElementById("the-dialog");
+
+            // Alert dialog appears when alert button pressed
+            document.getElementById("alert-btn").addEventListener("click", ()=>{
+                resultBox.innerHTML = "";
+                showDialog(theDialog, "alert-dialog");
+            });
+
+            // Confirm dialog appears when alert button pressed
+            // Records whether user confirmed or not in result(a.k.a. output) box
+            document.getElementById("confirm-btn").addEventListener("click", ()=>{
+                resultBox.innerHTML = "";
+                showDialog(theDialog, "confirm-dialog");
+                document.getElementById("cancel-confirm").addEventListener("click", ()=>{
+                    resultBox.innerHTML = "Confirm Result: False";
+                });
+                document.getElementById("ok-confirm").addEventListener("click", ()=>{
+                    resultBox.innerHTML = "Confirm Result: True";
+                });
+            })
+
+            // Prompt dialog appears when alert button pressed
+            // Records sanitized user input or default input if user cancelled input or input is empty/invalid in result box
+            document.getElementById("prompt-btn").addEventListener("click", ()=>{
+                resultBox.innerHTML = "";
+                showDialog(theDialog, "prompt-dialog");
+                document.getElementById("cancel-prompt").addEventListener("click", ()=>{
+                    resultBox.innerHTML = "Did not get name"
+                });
+                document.getElementById("ok-prompt").addEventListener("click", ()=>{
+                    let nameInput = document.getElementById("username").value;
+                    resultBox.innerHTML = nameInput.length != 0? cleanString`Name Result: ${nameInput}`:"Did not get name";
+                });
+            });
+
+        </script>
+    </body>
+</html>

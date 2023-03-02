@@ -160,13 +160,11 @@ window.onload = function(){
      */
     function updateItem(index){
         let curItem = blogItems[index]; // Get blog item user wants to update
-
+        showDialog(crudDialog, "update-temp"); // Show update form dialog
         // Extract title, summary and date from blog item user wants to update
         document.getElementById("update-title").value = curItem.title;
         document.getElementById("update-summary").value = curItem.summary;
         let date = curItem.date;
-
-        showDialog(crudDialog, "update-temp"); // Show update form dialog
 
         document.getElementById("update-ok").addEventListener("click", ()=>{
             crudDialog.close(); // Close update form dialog

@@ -38,10 +38,12 @@ function loadColorScheme(){
     let modeSvg = darkModeSvg;
     let logo = "images/logo.svg";
 
-    if(localStorage.getItem("color-scheme") && (localStorage.getItem("color-scheme") == dark)){
-        colorScheme = dark;
-        modeSvg = lightModeSvg;
-        logo = "images/dark-logo.svg";
+    if(localStorage.getItem("color-scheme")){
+        if(localStorage.getItem("color-scheme") == dark){
+            colorScheme = dark;
+            modeSvg = lightModeSvg;
+            logo = "images/dark-logo.svg";
+        }
     }
     else if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
         colorScheme = dark;

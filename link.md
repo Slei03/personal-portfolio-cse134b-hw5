@@ -1,3 +1,5 @@
+- Github Repo: https://github.com/Slei03/personal-portfolio-cse134b-hw4
+
 - Part 1 (Simple Dialogs): https://sallyleijs.netlify.app/nativedialogs.html
 
 - Part 2 (Custom Dialogs): https://sallyleijs.netlify.app/customdialog.html

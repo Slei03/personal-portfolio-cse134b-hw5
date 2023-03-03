@@ -72,6 +72,10 @@ header img{
     padding: 0.25em 1em;
 }
 
+#logo{
+    width: 35%;
+}
+
 #color-mode{
     background-color: transparent;
     padding: 0 1em;
@@ -86,6 +90,18 @@ header img{
 #color-mode:hover>svg>path{
     opacity: 1;
     fill: var(--theme-icon-hover-color);
+}
+
+@media screen and (max-width:300px){
+    #logo{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:150px){
+    #logo{
+        width: 90%;
+    }
 }
 /******************About Page******************/
 #about{
@@ -106,6 +122,10 @@ header img{
 
 #me{
     animation: 2s linear infinite alternate up-down;
+}
+
+#me img{
+    width: 95%;
 }
 
 @keyframes up-down{

@@ -1,13 +1,9 @@
-- Github Repo: https://github.com/Slei03/personal-portfolio-cse134b-hw4
+- Github Repo: https://github.com/Slei03/personal-portfolio-cse134b-hw5
 
-- Part 1 (Simple Dialogs): https://sallyleijs.netlify.app/nativedialogs.html
+- Part 1 (HTTP w/ JS): https://sallyleiajax.netlify.app/methodtest.html
 
-- Part 2 (Custom Dialogs): https://sallyleijs.netlify.app/customdialog.html
+- Part 2 (Web Component): https://sallyleiajax.netlify.app/webcomponent.html
 
-- Part 3 (Simple CRUD): https://sallyleijs.netlify.app/crud.html
-
-- Part 4 (Styled CRUD): https://sallyleijs.netlify.app/styledcrud.html
-
-- Part 5 (Personal Site): https://sallyleijs.netlify.app/
+- Part 3 (Extra Credit - React): https://sallyleiajax.netlify.app/extracredit.html
 
 

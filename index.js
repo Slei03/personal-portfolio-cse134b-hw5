@@ -67,7 +67,7 @@ function selectNav(mainId){
     document.getElementById(navId).style = selectedCSS;
 }
 
-window.onload = ()=>{
+window.addEventListener('DOMContentLoaded', ()=>{
 
     loadColorScheme(); // Loads color mode based on current user preferences
 
@@ -76,7 +76,6 @@ window.onload = ()=>{
 
     if(main.id == "contact"){  
         // Add event listener for contact form submission if current page is contact page
-
         document.getElementById("contact-form").addEventListener("submit", (e)=>{
             e.preventDefault(); // prevent form submission and page refresh
             let dialog = document.getElementById("contact-form-dialog");
@@ -99,4 +98,4 @@ window.onload = ()=>{
         loadColorScheme(); // Update color cheme of page
     })
 
-}
+});

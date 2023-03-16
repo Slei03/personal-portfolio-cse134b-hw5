@@ -226,24 +226,26 @@ header img{
     width: 65%;
 }
 
-#contact-form{
+form{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-#contact-form label{
+form > label{
     margin-bottom: 0.25em;
 }
 
-#contact-form input, textarea, button{
+form > input, textarea, button{
     font-size: 1rem;
     padding: 0.5rem;
     border: 1px solid black;
     border-radius: 5px;
+    background-color: var(--theme-form-color);
+    border-color: var(--theme-font-color);
 }
 
-#contact-form textarea{
+form > textarea{
     max-width: 100%;
 }
 
@@ -307,4 +309,56 @@ header img{
     #contact-form-dialog{
         width: 80%;
     }
+}
+
+/******************Method Test Page******************/
+#methodtest{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0% 15%;
+}
+
+#methodtest input{
+    margin: 0.4em 0;
+}
+
+#methodform-btns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#methodform-btns{
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#methodform-btns button{
+    width: 22%;
+    cursor: pointer;
+}
+
+#methodform-btns button:hover{
+    background-color: var(--theme-icon-hover-color);
+}
+
+#methodtest #response table, td, tr{
+    vertical-align: top;
+    border: 1px solid var(--theme-font-color);
+}
+
+#methodtest #response table{
+    width: 100%;
+}
+
+#methodtest #response td{
+    padding: 7px;
+}
+
+/******************Web Component Page******************/
+#webcomponent, #extracredit{
+    margin-top: 2rem;
+    text-align: center;
 }

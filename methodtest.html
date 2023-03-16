@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2SMT8Y39RF"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2SMT8Y39RF');
+        </script>
+        
+        <meta charset="UTF-8">
+        <meta name="description" content="Sally's Personal Site">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sally Lei - Method Test</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js" integrity="sha512-TU4FJi5o+epsahLtM9OFRvH2gXmmlzGlysk9wtTFgbYbMvFzh3Cw1l3ubnYIvBiZCC/aurRHS408TeEbcuOoyQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html"><img src="images/logo.svg" alt="Sally Logo" id="logo"></a>
+
+            <nav>
+                <a id="about-nav" href="index.html">about</a>
+                <a id="portfolio-nav" href="portfolio.html">portfolio</a>
+                <a id="contact-nav" href="contact.html">contact</a>
+                <a id="methodtest-nav" href="methodtest.html">method</a>
+                <a id="webcomponent-nav" href="webcomponent.html">webcomponent</a>
+                <a id="extracredit-nav" href="extracredit.html">extracredit</a>
+                <button id="color-mode"><!--Color Mode Icon--></button>
+            </nav>
+        </header>
+        <main id="methodtest">
+            <h1>HTTP Methods</h1>
+            
+            <form id="method-form">
+                <label for="id">Id:</label>
+                <input type="number" id="id" name="id">
+                <br>
+                <label for="name">Article Name: </label>
+                <input type="text" id="name" name="name">
+                <br>
+                <label for="body">Article Body:</label>
+                <textarea id="body" name="body" rows="5" cols="50" placeholder="Content here..."></textarea>
+                <br>
+            </form>
+
+            <div>
+                <label for="request_type">Request Method:</label><br>
+                <div>
+                    <input type="radio" id="fetch-radio" name="request_type" value="fetch" checked>
+                    <label for="fetch">fetch</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="xml-radio" name="request_type" value="xml">
+                    <label for="xml">XMLHttpRequest</label><br>
+                </div>
+            </div>
+            <div id="methodform-btns">
+                <button id="post-btn" type="button">post</button>
+                <button id="get-btn" type="button">get</button>
+                <button id="put-btn" type="button">put</button>
+                <button id="delete-btn" type="button">delete</button>
+            </div>
+            <aside><i>Note: Sketchy inputs are automatically sanitized.</i></aside>
+
+            <h3>Output</h3>
+            <output id="response"></output>
+        </main>
+
+        <script type="module" src="index.js"></script>
+        <script type="module" src="methodtest.js"></script>
+    </body>
+</html>
